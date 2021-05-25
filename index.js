@@ -1,6 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
+const util = require("util");
 const readme = require("./util/readme");
+const writeFile = util.promisify(fs.writeFile);
 
 function promptUser() {
   return inquirer.prompt([
@@ -58,12 +60,12 @@ function promptUser() {
   ]);
 }
 
-function init() {
+async function init() {
   try {
-    const answers = promptUser();
+    const answers = await promptUser();
     const useAnswers = readme(answers);
-    fs.writeFile("README.md", useAnswers);
-    console.log("Success!");
+    await writeFile("./util/README.md", useAnswers);
+    console.log("Successfully wrote to readme!");
   } catch (err) {
     console.log(err);
   }
