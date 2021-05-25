@@ -57,6 +57,7 @@ function promptUser() {
     },
   ]);
 }
+
 function init() {
   try {
     const answers = promptUser();
@@ -67,4 +68,5 @@ function init() {
     console.log(err);
   }
 }
+
 init();
