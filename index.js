@@ -10,21 +10,45 @@ function promptUser() {
       type: "input",
       name: "projectTitle",
       message: "What is the project title?",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must input a title!");
+        }
+        return true;
+      },
     },
     {
       type: "input",
       name: "description",
       message: "Write a brief description of your project: ",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must input a description!");
+        }
+        return true;
+      },
     },
     {
       type: "input",
       name: "installation",
       message: "Describe the installation process if any: ",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must how to install the application!");
+        }
+        return true;
+      },
     },
     {
       type: "input",
       name: "usage",
       message: "What is this project usage for?",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must input your usage!");
+        }
+        return true;
+      },
     },
     {
       type: "list",
@@ -51,11 +75,23 @@ function promptUser() {
       type: "input",
       name: "username",
       message: "Please enter your GitHub username: ",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must input your username!");
+        }
+        return true;
+      },
     },
     {
       type: "input",
       name: "email",
       message: "Please enter your email: ",
+      validate: function (response) {
+        if (response.length < 1) {
+          return console.log("You must input your email!");
+        }
+        return true;
+      },
     },
   ]);
 }
