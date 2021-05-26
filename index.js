@@ -72,17 +72,6 @@ function promptUser() {
       message: "What is the relative-path of your image?",
     },
     {
-      type: "list",
-      name: "another",
-      message: "Do you have another image?",
-      choices: ["Yes", "No"],
-      validate: function (response) {
-        if (response.choices === "Yes") {
-          return image;
-        }
-      },
-    },
-    {
       type: "input",
       name: "questions",
       message: "What do I do if I have an issue? ",
