@@ -9,7 +9,7 @@ function readme(answers) {
 ${answers.description}
 <br>
 ## Table of Contents
-* [Description](#description)a
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
@@ -23,6 +23,10 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 <br>
+##Screenshot
+
+![screenshot](./${answers.image})
+
 ## License
 ![badge](https://img.shields.io/badge/license-${answers.license}-brightgreen)<br>
 This application is covered by the ${answers.license} license. 
