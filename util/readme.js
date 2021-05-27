@@ -42,7 +42,7 @@ ${answers.questions}
 <br>
 Find me on GitHub: [${answers.username}](https://github.com/${answers.username})<br>
 <br>
-✉️ Email me with any questions: ${answers.email}<br>
+Email me with any questions: ${answers.email}<br>
     `;
 }
 
