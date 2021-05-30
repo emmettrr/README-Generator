@@ -1,0 +1,1 @@
+This application creates custom README files. This is accomplished with the use of the inquirer, util, and fs packages from npm. The user is prompted and those answers are used to complete the custom file using node js. The file is then inserted into the visual studio code project.
